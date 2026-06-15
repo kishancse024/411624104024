@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Website</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{padding:20px;text-align:center;font-family:Arial}
+
+nav{display:flex;flex-direction:column;background:#eee;padding:10px}
+nav a{text-decoration:none;color:black;padding:10px}
+
+@media(min-width:768px){
+nav{flex-direction:row;justify-content:center;gap:30px}
+}
+
+h1,img,video,table,button,.grid{margin:20px auto}
+
+img{width:300px;max-width:100%;border-radius:50px}
+video{width:50vw;padding:10px;background:green}
+
+table{border-collapse:collapse;width:70%}
+th,td{border:1px solid;padding:10px}
+
+button{
+border:none;
+padding:10px 20px;
+background:green;
+color:white;
+cursor:pointer
+}
+button:hover{opacity:.8}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+max-width:800px
+}
+.grid div{background:#ddd;padding:25px}
+
+@media(max-width:767px){
+.grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
+<h1>Responsive Website</h1>
+
+<img src="https://picsum.photos/300/200" alt="Image">
+
+<video controls>
+<source src="video.mp4" type="video/mp4">
+</video>
+
+<table>
+<tr><th>Reg.no</th><th>Name</th><th>Contact</th></tr>
+<tr><td>101</td><td>Alex</td><td>CSE</td></tr>
+<tr><td>102</td><td>Alpha</td><td>IT</td></tr>
+</table>
+
+<button>Click Me</button>
+
+<div class="grid">
+<div>1</div><div>2</div><div>3</div><div>4</div>
+<div>5</div><div>6</div><div>7</div><div>8</div>
+</div>
+
+</body>
+</html>
